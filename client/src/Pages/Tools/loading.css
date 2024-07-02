@@ -1,0 +1,51 @@
+body {
+  margin: 0px;
+}
+.cover {
+  position: fixed;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.418);
+  align-items: center;
+  justify-content: center;
+}
+.loadingCont {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  width: 20vh;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 85%);
+  border-radius: 5vh;
+}
+.loading {
+  height: 10vh;
+  width: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle {
+  position: absolute;
+  font-size: 100px;
+  color: hsl(var(--mainColor), var(--mainSaturation), 10%);
+}
+.revision {
+  color: hsl(var(--mainColor), var(--mainSaturation), 10%);
+  font-size: 50px;
+  animation: rotation 2s linear 0s infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

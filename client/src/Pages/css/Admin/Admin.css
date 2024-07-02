@@ -1,0 +1,194 @@
+/* Admin Login Page */
+#admin-login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+}
+#admin-login-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 80%);
+  border: solid hsl(var(--mainColor), var(--mainSaturation), 80%) 5px;
+  box-shadow: rgba(0, 0, 0, 0.233) 2vmin 2vmin 2vmin;
+  border-radius: 5vmin;
+}
+#admin-login-form {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  gap: 2vmin;
+}
+#login-title {
+  color: hsl(var(--mainColor), var(--mainSaturation), 30%);
+}
+#admin-login-username {
+  width: 40vw;
+  border-radius: 2vw;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 95%);
+  border-color: hsl(var(--mainColor), var(--mainSaturation), 30%);
+  color: hsl(var(--mainColor), var(--mainSaturation), 10%);
+}
+#admin-login-password {
+  width: 40vw;
+  border-radius: 2vw;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 95%);
+  border-color: hsl(var(--mainColor), var(--mainSaturation), 30%);
+  color: hsl(var(--mainColor), var(--mainSaturation), 10%);
+}
+#admin-login-submit {
+  width: 40%;
+  border-color: hsl(var(--mainColor), var(--mainSaturation), 30%);
+  border-radius: 2vw;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  color: hsl(var(--mainColor), var(--mainSaturation), 80%);
+}
+#admin-login-submit:hover {
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 15%);
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+}
+#admin-login-submit:active {
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 10%);
+  color: hsl(var(--mainColor), var(--mainSaturation), 95%);
+}
+/* Admin Success Page */
+#sideBar {
+  position: fixed;
+  left: 0px;
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+  height: 100%;
+  top: 0px;
+  width: 11vw;
+  z-index: 5;
+  min-width: 40px;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 15%);
+  padding-left: 1vmin;
+  border-left: solid 1vmin hsla(var(--mainColor), var(--mainSaturation), 90%, 0.6);
+  border-right: solid 0.3vmin hsla(var(--mainColor), var(--mainSaturation), 90%, 0.6);
+}
+#sideNavHead {
+  display: flex;
+  margin-bottom: 3vh;
+  padding: 1vmin;
+  align-items: center;
+  border-bottom: solid 1vmin hsla(var(--mainColor), var(--mainSaturation), 90%, 0.6);
+}
+#sideNavHeadText {
+  color: hsl(var(--mainColor), var(--mainSaturation), 97%);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 3.5vmin;
+  font-weight: 900;
+}
+#profilePic {
+  height: 6vmin;
+  width: 6vmin;
+  border: 0.5vmin solid hsl(var(--mainColor), var(--mainSaturation), 90%);
+  object-fit: cover;
+  border-radius: 6vmin;
+}
+.sideNavHeading {
+  color: rgb(231, 231, 231);
+  margin-top: 2vh;
+  margin-bottom: 0.3vh;
+  font-size: 3vmin;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.sideNavLink {
+  text-decoration: none;
+  color: hsla(var(--mainColor), var(--mainSaturation), 90%, 0.3);
+  font-size: 3vmin;
+  text-align: left;
+  padding-left: 1vmin;
+  font-family: Arial, Helvetica, sans-s erif;
+}
+.sideNavLinkIcon {
+  margin-right: 0.8vmin;
+}
+#outlet {
+  color: black;
+}
+/* Admin Home Page */
+#adminHomeContainer {
+  top: 50px;
+  position: relative;
+  left: 5vw;
+  display: flex;
+  flex-flow: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+}
+#infoContainer {
+  top: 50px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.info {
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 80%);
+  height: 20vw;
+  min-height: 110px;
+  width: 20vw;
+  min-width: 110px;
+  border: solid hsl(var(--mainColor), var(--mainSaturation), 20%) 5px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 3vw;
+}
+#pageActionsContainer {
+  display: grid;
+  grid-template-areas:
+    "at at at"
+    "b1 b2 b3";
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 80%);
+  border: solid hsl(var(--mainColor), var(--mainSaturation), 20%) 5px;
+  border-radius: 50px;
+  height: 15vw;
+  width: 40vw;
+  gap: 10px;
+}
+#pageActionsContainer > button {
+  height: 5vw;
+  width: 10vw;
+  border-radius: 30px;
+  border: solid hsl(var(--mainColor), var(--mainSaturation), 20%) 5px;
+  color: hsl(var(--mainColor), var(--mainSaturation), 10%);
+  font-weight: bolder;
+
+  background-image: linear-gradient(135deg, hsl(var(--mainColor), var(--mainSaturation), 97%), hsl(var(--mainColor), var(--mainSaturation), 70%));
+  transition: 0.5s;
+}
+#pageActionsContainer > button:hover {
+  background-image: none;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 70%);
+}
+#pageActionsContainer > button:active {
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 60%);
+  transition: none;
+}
+#abtn1 {
+  grid-area: b1;
+  justify-self: center;
+}
+#abtn2 {
+  grid-area: b2;
+  justify-self: center;
+}
+#abtn3 {
+  grid-area: b3;
+  justify-self: center;
+}
+#pageActionsContainer > span {
+  margin-top: 40px;
+  font-size: x-large;
+  font-weight: bolder;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  grid-area: at;
+  justify-self: center;
+}

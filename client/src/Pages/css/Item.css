@@ -1,0 +1,52 @@
+#itemBackground {
+  width: 100vw;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+}
+#itemContainer {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 85%);
+  border-top-left-radius: 50px;
+  width: 70vw;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 50px;
+}
+#imageContainer {
+  display: flex;
+  align-items: center;
+}
+#itemImagesSlideLeft,
+#itemImagesSlideRight {
+  height: 60px;
+  font-weight: bolder;
+  font-size: larger;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 80%);
+  border: hsl(var(--mainColor), var(--mainSaturation), 10%) solid 2px;
+  border-radius: 5px;
+  color: hsl(var(--mainColor), var(--mainSaturation), 10%);
+}
+#img {
+  height: 400px;
+  width: 400px;
+  border: 5px solid hsl(var(--mainColor), var(--mainSaturation), 10%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+}
+#itemImagesContainer {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  transition: 1s;
+}
+.images {
+  height: 400px;
+  min-height: 400px;
+  width: 400px;
+  min-width: 400px;
+  object-fit: cover;
+}

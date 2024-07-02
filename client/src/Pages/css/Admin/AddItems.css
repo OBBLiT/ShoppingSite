@@ -1,0 +1,429 @@
+/* Admin Add Items */
+.header {
+  position: fixed;
+  right: 0px;
+  display: flex;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 5%);
+  flex-flow: row;
+  margin-bottom: 1vh;
+  align-items: center;
+  justify-content: flex-end;
+  height: 10vh;
+  width: 95vw;
+  z-index: 5;
+}
+#HIContainer {
+  display: flex;
+  align-items: center;
+  width: 55vw;
+  justify-content: space-between;
+}
+.title {
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  font-size: xx-large;
+}
+#aiBackBtn {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border: solid hsl(var(--mainColor), var(--mainSaturation), 30%) 2px;
+  color: hsl(var(--mainColor), var(--mainSaturation), 10%);
+  font-size: x-large;
+  font-weight: bolder;
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
+  z-index: 10;
+}
+#aiBackBtn:hover {
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 80%);
+}
+#aiBackBtn:active {
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 70%);
+}
+#adminAddItemsContainer {
+  position: relative;
+  left: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#addItemsForm {
+  padding: 10px;
+  position: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: fit-content;
+  width: 60vw;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 80%);
+  border: solid hsl(var(--mainColor), var(--mainSaturation), 30%);
+  border-radius: 5vh;
+  margin-top: 12vh;
+}
+#nameInput {
+  padding: 5px;
+  margin-top: 5px;
+  grid-area: ni;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  user-select: none;
+}
+#brandInput {
+  padding: 5px;
+  margin-top: 5px;
+  grid-area: bi;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  user-select: none;
+}
+#priceInput {
+  padding: 5px;
+  grid-area: pi;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  user-select: none;
+}
+#addItemCategories {
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  display: flex;
+  max-width: 11vw;
+  max-height: 15vh;
+  overflow: scroll;
+  flex-wrap: wrap;
+  gap: 5px;
+  user-select: none;
+}
+#addItemCategoriesInput {
+  grid-area: ci;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-color: transparent;
+  user-select: none;
+  border-radius: 10px;
+  width: 11vw;
+  height: 3.6vh;
+}
+
+.categoriesItemContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 70%);
+  border-radius: 5px;
+  user-select: none;
+  height: 2.5vw;
+  border: solid hsl(var(--mainColor), var(--mainSaturation), 40%) 0.1vw;
+}
+.categoriesItem {
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  cursor: pointer;
+  user-select: none;
+}
+.categoriesItemDelete {
+  border: 1px solid hsl(var(--mainColor), var(--mainSaturation), 80%);
+  color: hsl(var(--mainColor), var(--mainSaturation), 70%);
+  margin-left: 5px;
+  border-radius: 5px;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  user-select: none;
+  text-align: center;
+  padding-left: 0.1vw;
+  padding-right: 0.1vw;
+}
+.categoriesItemDelete:hover {
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 30%);
+  cursor: pointer;
+}
+.categoriesItemDelete:active {
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 40%);
+}
+#addItemCategoriesInput:focus {
+  border: solid hsl(var(--mainColor), var(--mainSaturation), 90%);
+}
+#categoryLabel {
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+}
+#categoryDropDown {
+  grid-area: cdd;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+}
+#newCategoryLabel {
+  grid-area: ncl;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+}
+#newCategoryCheckBox {
+  grid-area: ncc;
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+}
+#descriptionInput {
+  padding: 5px;
+  height: 30vh;
+  width: 55vw;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  resize: none;
+  grid-area: di;
+  user-select: none;
+}
+#colorsInput {
+  padding: 5px;
+  grid-area: coli;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  user-select: none;
+}
+#imageInputConainer1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#imageInput1 {
+  grid-area: ii1;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  user-select: none;
+}
+#imageInput1::file-selector-button {
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  border-radius: 10px;
+  border: none;
+}
+#imageInput1::-webkit-file-upload-button {
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  border-radius: 10px;
+  border: none;
+}
+#image1 {
+  grid-area: i1;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  min-height: 150px;
+  min-width: 150px;
+}
+#imageInputConainer2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#imageInput2 {
+  grid-area: ii2;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  user-select: none;
+}
+#imageInput2::file-selector-button {
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  border-radius: 10px;
+  border: none;
+}
+#imageInput2::-webkit-file-upload-button {
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  border-radius: 10px;
+  border: none;
+}
+#image2 {
+  grid-area: i2;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  min-height: 150px;
+  min-width: 150px;
+}
+#imageInputConainer3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#imageInput3 {
+  grid-area: ii3;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  user-select: none;
+}
+#imageInput3::file-selector-button {
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  border-radius: 10px;
+  border: none;
+}
+#imageInput3::-webkit-file-upload-button {
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  border-radius: 10px;
+  border: none;
+}
+#image3 {
+  grid-area: i3;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  min-height: 150px;
+  min-width: 150px;
+}
+#imageInputConainer4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#imageInput4 {
+  grid-area: ii4;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  user-select: none;
+}
+#imageInput4::file-selector-button {
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  border-radius: 10px;
+  border: none;
+}
+#imageInput4::-webkit-file-upload-button {
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  border-radius: 10px;
+  border: none;
+}
+#image4 {
+  grid-area: i4;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  min-height: 150px;
+  min-width: 150px;
+}
+#imageInputConainer5 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#imageInput5 {
+  grid-area: ii5;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  user-select: none;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+}
+#imageInput5::file-selector-button {
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  border-radius: 10px;
+  border: none;
+}
+#imageInput5::-webkit-file-upload-button {
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  border-radius: 10px;
+  border: none;
+}
+#image5 {
+  grid-area: i5;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  min-height: 150px;
+  min-width: 150px;
+}
+#imageInputConainer6 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#imageInput6 {
+  grid-area: ii6;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  user-select: none;
+}
+#imageInput6::file-selector-button {
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  border-radius: 10px;
+  border: none;
+}
+#imageInput6::-webkit-file-upload-button {
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  border-radius: 10px;
+  border: none;
+}
+#image6 {
+  grid-area: i6;
+  color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-radius: 10px;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  min-height: 150px;
+  min-width: 150px;
+}
+#saveBtn {
+  grid-area: sb;
+  margin: 20px 0px;
+  width: 100px;
+  justify-self: center;
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 30%);
+  border-radius: 10vw;
+  border: 2px solid hsl(var(--mainColor), var(--mainSaturation), 40%);
+  user-select: none;
+  height: 4vw;
+  width: 15vw;
+}
+#saveBtn:hover {
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+}
+#saveBtn:active {
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 10%);
+}
+#saveBtn:disabled {
+  color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 20%);
+}
+#saveBtnContainer {
+  width: 55vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

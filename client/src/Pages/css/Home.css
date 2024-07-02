@@ -1,0 +1,52 @@
+:root {
+  --mainColor: 200;
+  --mainSaturation: 100%;
+}
+body {
+  margin: 0px;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+}
+#homeOverallContainer {
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+}
+#homeContainer {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.homeItemContainer {
+  display: flex;
+  flex-flow: column;
+  background-color: hsl(var(--mainColor), var(--mainSaturation), 90%);
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  border: solid 5px hsl(var(--mainColor), var(--mainSaturation), 20%);
+  /* height: 600px; */
+  width: 350px;
+  padding: 25px 0px;
+  justify-content: center;
+  align-items: center;
+}
+.homeItemDitsContainer {
+  display: flex;
+  flex-flow: column;
+  width: 295px;
+  /* height: 235px; */
+  border: 5px hsl(var(--mainColor), var(--mainSaturation), 20%) solid;
+  border-bottom-right-radius: 60px;
+  padding-left: 5px;
+}
+.homeItemImage {
+  border: 5px hsl(var(--mainColor), var(--mainSaturation), 20%) solid;
+  border-top-left-radius: 60px;
+}
+.homeItemName,
+.homeItemBrand,
+.homeItemPrice,
+.homeItemDescription {
+  margin: 5px;
+  justify-self: flex-start;
+  align-self: flex-start;
+}
